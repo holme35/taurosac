@@ -1,0 +1,52 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Función para desplazamiento suave
+    function scrollToSection(id) {
+        const section = document.querySelector(id);
+        if (section) {
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Añadir eventos click a los enlaces
+    document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToSection('#seccion_2');
+    });
+
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        scrollToSection('footer');
+    });
+
+    // Añadir evento click al logotipo
+    document.getElementById('logotipo-img').addEventListener('click', function() {
+        // Acción al hacer clic en el logotipo
+    });
+
+    // Manejar el desplazamiento del nav
+    const header = document.getElementById('header');
+    const nav = document.getElementById('nav');
+    const navLogotipo = document.getElementById('nav-logotipo');
+    const stickyClass = 'sticky';
+    const stickyLogoClass = 'sticky-logo';
+    const headerHeight = header.offsetHeight;
+
+    function handleScroll() {
+        if (window.scrollY > headerHeight) {
+            nav.classList.add(stickyClass);
+            if (navLogotipo) {
+                navLogotipo.classList.remove(stickyLogoClass);
+            }
+        } else {
+            nav.classList.remove(stickyClass);
+            if (navLogotipo) {
+                navLogotipo.classList.add(stickyLogoClass);
+            }
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+});
