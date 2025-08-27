@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav {
+    display: inline-block;
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Section Styling */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center the content vertically */
+    text-align: center; /* Center text */
+}
+
+/* Reducing the size of product images and centering them */
+.producto1-img,
+.producto2-img,
+.producto3-img,
+.producto4-img,
+.producto5-img {
+    display: flex; /* Flexbox to center the images */
+    justify-content: center; /* Center the images horizontally */
+    margin-top: 20px; /* Space between image and text */
+}
+
+.producto1-img img,
+.producto2-img img,
+.producto3-img img,
+.producto4-img img,
+.producto5-img img {
+    width: 400px; /* Adjust image width */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Section Styling */
+#tauro {
+    background-color: #f9f9f9;
+}
+
+#tauro h2 {
+    color: #2c3e50;
+}
+
+#tauro p {
+    color: #7f8c8d;
+}
+
+/* Additional Styling for Layout & Responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        font-size: 14px;
+    }
+
+    section {
+        flex-direction: column; /* Stacks text and image vertically on smaller screens */
+        align-items: center; /* Ensure everything is centered */
+    }
+
+    /* Further reducing the product image size for smaller screens */
+    .producto1-img img,
+    .producto2-img img,
+    .producto3-img img,
+    .producto4-img img,
+    .producto5-img img {
+        width: 250px; /* Reduces image size on smaller screens */
+    }
+}
